@@ -10,6 +10,8 @@ if pd.board() == "EK-LM3S8962" or pd.board() == "EK-LM3S6965" then
 elseif pd.board() == "SAM7-EX256" then
   pwmid, tmrid, ledpin = 0, 1, pio.PB_20
   tmr.setclock( 1, 100000 )
+elseif pd.board() == "ELUA-ZEISIG-GEMACHT" then
+  pwmid, tmrid, ledpin = 0, 1, pio.PC_4
 else
   print( pd.board() .. " not supported with this example" )
   return
